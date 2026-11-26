@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Transbulent Reach Core: WebGL2 3D Travel-Time Terrain & Multimodal Routing Engine"
+message: "If you use this software in academic or operational work, please cite it using these metadata."
+type: software
+authors:
+  - family-names: Fajrianshah
+    given-names: Evans Azka
+    affiliation: "National Research and Innovation Agency (BRIN); Doctoral Program in Environmental Science, Graduate School, Universitas Gadjah Mada"
+repository-code: "https://github.com/gisrad/reach-the-city"
+url: "https://reach.transbulent.id"
+license: MIT
+keywords:
+  - travel-time
+  - isochrone
+  - webgl2
+  - maplibre-gl
+  - urban-mobility
+  - multimodal-routing
+  - indonesia

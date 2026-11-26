@@ -1,0 +1,182 @@
+{
+  "id": "demo-metro",
+  "name": "Synthetic Demo Metro",
+  "motorTollAllowed": false,
+  "bbox": [100.0, -1.2, 100.4, -0.8],
+  "center": [100.2, -1.0],
+  "zoom": 10,
+  "defaultOriginId": "hub-central",
+  "defaultAnchorBId": "hub-east",
+  "touristPresets": ["poi-park", "poi-museum", "poi-harbor"],
+  "congestionCurve": {
+    "motor": [
+      1.0, 1.0, 1.0, 1.0, 1.05, 1.1, 1.2, 1.35, 1.4, 1.25, 1.15, 1.15,
+      1.2, 1.2, 1.15, 1.2, 1.35, 1.45, 1.4, 1.25, 1.1, 1.05, 1.0, 1.0
+    ],
+    "car": [
+      1.0, 1.0, 1.0, 1.0, 1.1, 1.2, 1.45, 1.8, 1.9, 1.5, 1.3, 1.3,
+      1.35, 1.35, 1.3, 1.4, 1.75, 2.0, 1.85, 1.45, 1.2, 1.1, 1.0, 1.0
+    ]
+  },
+  "transitLines": [
+    {
+      "id": "line-rail",
+      "name": "Demo Commuter Rail",
+      "mode": "rail",
+      "color": "#0F766E"
+    },
+    {
+      "id": "line-brt",
+      "name": "Demo Metro BRT",
+      "mode": "brt",
+      "color": "#2563EB"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "hub-central",
+      "name": "Central Station",
+      "lon": 100.2,
+      "lat": -1.0,
+      "kind": "hub",
+      "modes": ["rail", "brt"],
+      "category": "hub"
+    },
+    {
+      "id": "st-north",
+      "name": "North Gate",
+      "lon": 100.2,
+      "lat": -0.9,
+      "kind": "station",
+      "modes": ["rail"],
+      "category": "station"
+    },
+    {
+      "id": "hub-east",
+      "name": "East Exchange",
+      "lon": 100.3,
+      "lat": -1.0,
+      "kind": "hub",
+      "modes": ["rail", "brt"],
+      "category": "hub"
+    },
+    {
+      "id": "st-south",
+      "name": "South Terminal",
+      "lon": 100.2,
+      "lat": -1.1,
+      "kind": "station",
+      "modes": ["brt"],
+      "category": "station"
+    },
+    {
+      "id": "poi-park",
+      "name": "Botanical Terrace",
+      "lon": 100.25,
+      "lat": -0.95,
+      "kind": "tourist",
+      "category": "tourist"
+    },
+    {
+      "id": "poi-museum",
+      "name": "Civic History Museum",
+      "lon": 100.15,
+      "lat": -0.98,
+      "kind": "tourist",
+      "category": "tourist"
+    },
+    {
+      "id": "poi-harbor",
+      "name": "Western Harbor",
+      "lon": 100.1,
+      "lat": -1.02,
+      "kind": "tourist",
+      "category": "tourist"
+    },
+    {
+      "id": "hosp-main",
+      "name": "Regional General Hospital",
+      "lon": 100.22,
+      "lat": -1.03,
+      "kind": "hospital",
+      "category": "hospital"
+    },
+    {
+      "id": "hosp-north",
+      "name": "Northside Medical Center",
+      "lon": 100.18,
+      "lat": -0.88,
+      "kind": "hospital",
+      "category": "hospital"
+    },
+    {
+      "id": "air-intl",
+      "name": "Metro International Airport",
+      "lon": 100.36,
+      "lat": -1.06,
+      "kind": "airport",
+      "category": "airport"
+    },
+    {
+      "id": "grid-nw",
+      "name": "Northwest Sector",
+      "lon": 100.12,
+      "lat": -0.9,
+      "kind": "grid",
+      "category": "grid"
+    },
+    {
+      "id": "grid-se",
+      "name": "Southeast Sector",
+      "lon": 100.32,
+      "lat": -1.12,
+      "kind": "grid",
+      "category": "grid"
+    }
+  ],
+  "edges": [
+    [0, 1, 1, 10, 16, 8, 300, 1320, 0],
+    [0, 2, 1, 12, 16, 8, 300, 1320, 0],
+    [0, 3, 1, 14, 14, 6, 300, 1320, 1],
+    [2, 9, 1, 15, 20, 10, 300, 1320, 1],
+    [0, 4, 0, 1.8, 2],
+    [4, 2, 0, 5.2, 1],
+    [0, 5, 0, 1.5, 2],
+    [5, 6, 0, 6.4, 1],
+    [0, 7, 0, 3.8, 1],
+    [7, 3, 0, 4.5, 2],
+    [1, 8, 0, 2.1, 2],
+    [8, 10, 0, 7.5, 1],
+    [1, 10, 0, 8.8, 3],
+    [2, 9, 0, 11.2, 0],
+    [3, 11, 0, 12.5, 0],
+    [7, 11, 0, 9.6, 1],
+    [4, 1, 0, 6.1, 2],
+    [5, 10, 0, 8.2, 3]
+  ],
+  "triangles": [
+    0, 1, 4,
+    0, 4, 2,
+    0, 2, 7,
+    0, 7, 3,
+    0, 3, 5,
+    0, 5, 1,
+    1, 10, 8,
+    1, 8, 4,
+    2, 9, 11,
+    2, 11, 7,
+    5, 6, 10
+  ],
+  "skirtEdges": [
+    1, 10,
+    10, 6,
+    6, 5,
+    5, 3,
+    3, 11,
+    11, 9,
+    9, 2,
+    2, 4,
+    4, 8,
+    8, 1
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@gisrad/reach-core",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Core WebGL2 3D travel-time terrain renderer and time-dependent multimodal Web Worker routing engine powering Transbulent Reach.",
+  "license": "MIT",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "tsc && node --test dist/tests/routing-engine.test.js",
+    "check:security": "node scripts/security-check.mjs",
+    "check": "npm run typecheck && npm test && npm run check:security"
+  },
+  "dependencies": {
+    "maplibre-gl": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}
